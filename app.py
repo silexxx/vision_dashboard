@@ -1,30 +1,45 @@
 import pandas as pd
 import streamlit as st
+from PIL import Image
+
+
 
 st.beta_set_page_config(layout="wide")
 
-col1, col2 ,col3 = st.beta_columns((2, 2, 1))
+
+
+img1=Image.open("logo.jpg")
+
+newsize = (200, 200) 
+img1 = img1.resize(newsize)
+
+
+st.image(img1,caption="")
+
+
+
+# col1, col2 ,col3 = st.beta_columns((2, 2, 1))
 
 
 
 
-original = 'Channel 1'
+# original = 'Channel 1'
 
-if col1.button(original):
-	st.write("[GitHub](http://github.com)")
-
-
-
-grayscale = "Channel 2"
-
-if col2.button(grayscale):
-	st.write("[GitHub](http://github.com)")
+# if col1.button(original):
+# 	st.write("[GitHub](http://github.com)")
 
 
-name="Channel 3"
 
-if col3.button(name):
-	st.write("[GitHub](http://github.com)")
+# grayscale = "Channel 2"
+
+# if col2.button(grayscale):
+# 	st.write("[GitHub](http://github.com)")
+
+
+# name="Channel 3"
+
+# if col3.button(name):
+# 	st.write("[GitHub](http://github.com)")
 
 
 
@@ -33,9 +48,9 @@ if col3.button(name):
 col4, col5 ,col6 = st.beta_columns((2, 2, 1))
 
 
-col4.write("[Channel 4](http://github.com)")
-col5.write("[Channel 5](http://github.com)")
-col6.write("[Channel 6](http://github.com)")
+col4.write("[Channel 4](https://drive.google.com/file/d/1fu1LyeJ7VUlJn7VG9yu51WekHsTrZ2c3/view?usp=sharing)")
+col5.write("[Channel 5](https://drive.google.com/file/d/1H9rC2mWdMfEKZFw2QDKsZnhDwDzCx3Rn/view?usp=sharing)")
+col6.write("[Channel 6](https://drive.google.com/file/d/11U3it77_T6oJI4R4Qzf_afcsvou1wgkY/view?usp=sharing)")
 
 
 
@@ -44,29 +59,29 @@ col6.write("[Channel 6](http://github.com)")
 
 
 
-col7, col8 ,col9 = st.beta_columns((2, 2, 1))
+# col7, col8 ,col9 = st.beta_columns((2, 2, 1))
 
-def coll7():
-    href = '''<button onclick="location.href = 'https://www.linkedin.com/in/daneshwar-gobbani-baa69516a/';" id="myButton" class="float-left submit-button" >Channel 7</button>'''
-    return href
-col7.markdown(coll7(), unsafe_allow_html=True)
-
-
-def coll8():
-    href = '''<button onclick="location.href = 'https://www.linkedin.com/in/daneshwar-gobbani-baa69516a/';" id="myButton" class="float-left submit-button" >Channel 8</button>'''
-    return href
-col8.markdown(coll8(), unsafe_allow_html=True)
+# def coll7():
+#     href = '''<button onclick="location.href ='https://drive.google.com/file/d/1fu1LyeJ7VUlJn7VG9yu51WekHsTrZ2c3/view?usp=sharing';" id="myButton" class="float-left submit-button" >Channel 1</button>'''
+#     return href
+# col7.markdown(coll7(), unsafe_allow_html=True)
 
 
-def coll9():
-    href = '''<button onclick="location.href = 'https://www.linkedin.com/in/daneshwar-gobbani-baa69516a/';" id="myButton" class="float-left submit-button" >Channel 9</button>'''
-    return href
-col9.markdown(coll9(), unsafe_allow_html=True)
+# def coll8():
+#     href = '''<button onclick="location.href ='https://drive.google.com/file/d/1H9rC2mWdMfEKZFw2QDKsZnhDwDzCx3Rn/view?usp=sharing';" id="myButton" class="float-left submit-button" >Channel 2</button>'''
+#     return href
+# col8.markdown(coll8(), unsafe_allow_html=True)
+
+
+# def coll9():
+#     href = '''<button onclick="location.href ='https://drive.google.com/file/d/11U3it77_T6oJI4R4Qzf_afcsvou1wgkY/view?usp=sharing';" id="myButton" class="float-left submit-button" >Channel 3</button>'''
+#     return href
+# col9.markdown(coll9(), unsafe_allow_html=True)
 
 
 
 
-df=pd.read_csv("https://raw.githubusercontent.com/silexxx/test_videos_people_counting/main/hour.csv")
+df=pd.read_csv("https://raw.githubusercontent.com/silexxx/test_videos_people_counting/main/data.csv")
 st.dataframe(df)
 
 import plotly.express as px
